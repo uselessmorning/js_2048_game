@@ -48,6 +48,14 @@ function renderBoard() {
       if (cell !== 0) {
         cells[cellIndex].classList.add('field-cell--' + cell);
       }
+
+      if (
+        game.lastTile &&
+        rowIndex === game.lastTile.row &&
+        colIndex === game.lastTile.col
+      ) {
+        cells[cellIndex].classList.add('field-cell--new');
+      }
     });
   });
 

@@ -245,6 +245,7 @@ class Game {
     const randomCell = emptyCells[randomIndex];
 
     this.board[randomCell.row][randomCell.col] = Math.random() < 0.9 ? 2 : 4;
+    this.lastTile = randomCell;
   }
 
   checkWin() {
